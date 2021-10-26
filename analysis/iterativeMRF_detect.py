@@ -46,6 +46,8 @@ def get_Rad(mass): #Mowla et al. (2019) -- https://ui.adsabs.harvard.edu/abs/201
 virial_ = [] # just to get things to run, redefined later
 tile_coords = [0, 0] #same as "virial_" patch
 
+path = '../../'
+
 ### NASA Sloan Atlas -- http://nsatlas.org
 
 NSA_catalog = fits.open(path+'nsa_v0_1_2.fits')
@@ -273,7 +275,7 @@ def plot_cutouts(res, obj_pd, decals_fits, virial_radii = virial_, field_center 
 	i = 0
 	
 	for i,obj in obj_pd.iterrows():
-		fig, axes = plt.subplots(1,5, figsize = (4*14,12), gridspec_kw = {'width_ratios':[1, 1, 1, 1, 1.5], 'height_ratios':[1]})
+		fig, axes = plt.subplots(1,5, figsize = (4*14,12), gridspec_kw = {'width_ratios':[1, 1, 1, 1, 1.25], 'height_ratios':[1]})
 		
 		if num_obj == 1:
 			ax_df = axes[0]
@@ -519,7 +521,7 @@ for i in tiles_out:
 										verbose = False)
 	img_lowres = i
 	img_hires_b = '../DECaLS_download/' + short_name + '_g.fits'
-	img_hires_r = '../DECaLS_download/' + short_name + '_g.fits'
+	img_hires_r = '../DECaLS_download/' + short_name + '_r.fits'
 	results = task.run(img_lowres, img_hires_b, img_hires_r, 
 					   output_name=short_name + '_g', verbose = True, certain_gal_cat = None, 
 					   wide_psf = True, skip_SE = False, skip_mast = False, skip_resize = False)
