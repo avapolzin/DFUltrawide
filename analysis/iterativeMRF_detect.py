@@ -12,7 +12,6 @@ from astropy.coordinates import SkyCoord
 import astropy.units as u
 import matplotlib
 import artpop
-# import nu mpy.ma as np
 from astropy.nddata import Cutout2D
 from astropy.visualization import make_lupton_rgb
 from matplotlib_scalebar.scalebar import ScaleBar
