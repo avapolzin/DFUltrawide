@@ -1,0 +1,1 @@
+These files account for some random detections of fuzzy/interesting things in the UW images. Because this is a public repository, these images are decoupled from coordinates -- check the Dragonfly Slack channel or the Dragonfly Ultrawide Survey Notion page for more specific locations + additional objects.
